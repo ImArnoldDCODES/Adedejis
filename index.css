@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&family=Poppins:wght@500&family=Raleway:wght@600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+html {
+  background-color: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(78, 78, 101, 0.9864320728291317) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.navbar {
+  position: relative;
+}
+logo {
+  position: absolute;
+  padding: 70px;
+  margin-left: 50px;
+  background: none;
+}
+
+logo h2 {
+  font-size: 40px;
+  position: absolute;
+  background: none;
+  color: #fff;
+}
+
+.navbar ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  float: right;
+  margin-right: 230px;
+}
+.navbar ul li {
+  list-style: none;
+  margin-right: 20px;
+  margin-top: 55px;
+  background: none;
+}
+.navbar ul li a {
+  font-size: 20px;
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar ul li a:hover {
+  border: #000 5px dotted;
+  padding: 3px;
+}
+.content {
+  margin-top: 260px;
+  margin-left: 120px;
+  position: absolute;
+}
+.content h2 p {
+  position: initial;
+}
+.contant {
+  margin-top: 260px;
+  margin-left: 30px;
+  position: absolute;
+}
+.contant h3 {
+  font-weight: 800;
+  background: none;
+  margin-top: 80px;
+  margin-left: 89px;
+}
+.contant h3 p {
+  margin-left: 19px;
+  font-size: 28px;
+  position: absolute;
+  color: #fff;
+}
+.contant h3 li {
+  display: inline-block;
+  flex-direction: row;
+  list-style: none;
+  background: none;
+  margin-left: 3px;
+}
+
+.contant h3 li img {
+  width: 40px;
+  margin-top: 80px;
+  margin-left: 10px;
+  background: none;
+}
+
+.images {
+  display: flex;
+  width: 10%;
+  height: 60vh;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 10pc;
+  margin-left: 700px;
+  max-width: 10%;
+  max-height: 100%;
+  background: none;
+}
+.images img {
+  border-radius: 50%;
+}
+
+.wrap {
+  margin-left: 15px;
+  background: none;
+  color: #fff;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 270px;
+    position: absolute;
+    margin-top: 80px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    color: #000;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .navbar ul li a {
+    display: inline;
+    color: rgb(255, 255, 255);
+  }
+  .navbar ul{
+    background-color: #000;
+    transition: 3s;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  logo {
+    margin-left: -10px;
+  }
+  .contant h3 {
+    margin-top: 250px;
+    position: relative;
+  }
+  .contant h3 u {
+    position: absolute;
+    margin-top: -20px;
+  }
+  /* .content h3 li img {
+        margin-top: 900px;
+    } */
+  .images {
+    display: block;
+  }
+  .images img {
+    height: 10vh;
+    margin-left: -540px;
+    border-radius: 50%;
+    margin-top: 50px;
+  }
+  .wrap {
+    margin-top: 80px;
+    position: absolute;
+  }
+  .content h2 p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .navbar ul li a {
+    display: block;
+    background-color: none;
+    margin-right: -28px;
+  }
+}
