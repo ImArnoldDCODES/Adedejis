@@ -65,17 +65,16 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
- function myFunction(x) {
-   x.classList.toggle("change");
+// nav menu state (jquery)
+$(".nav-mobile-menu").on("click", function (e) {
+  e.preventDefault();
+  $(this).toggleClass("nav-mobile-menu--active");
+});
 
-   var mobile = document.querySelector(".navbar");
-   if (mobile.style.display = "none") {
-     mobile.style.display = "block";
-   }
-    else {
-     mobile.style.display = "none";
-   }
- }
+
+$(".nav-mobile-menu").on("click", function () {
+  $(".mobile").toggleClass('add-height');
+});
 
 // const menu = document.querySelector('.container');
 // let menuState = false;
