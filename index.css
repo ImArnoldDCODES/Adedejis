@@ -98,7 +98,6 @@ main {
   width: 22rem;
 }
 
-
 /* The typing effect */
 @keyframes typing {
   from {
@@ -121,37 +120,71 @@ main {
 }
 
 @media screen and (max-width: 860px) {
-  .nav-menu-mobile {
-    
+  header {
+    padding: 2rem 2rem;
   }
 
-  .bar1,
-  .bar2,
-  .bar3 {
-    width: 35px;
+  header ul li {
+    padding: 0.3rem 0;
+  }
+
+  .nav-mobile-menu {
+    margin: 1em;
+    width: 40px;
+  }
+
+  .nav-mobile-menu:after,
+  .nav-mobile-menu:before,
+  .nav-mobile-menu div {
+    background-color: #fff;
+    content: "";
+    display: block;
     height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-    color: #000;
+    margin: 7px 0;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+  .nav-mobile-menu--active:before {
+    transform: translateY(12px) rotate(135deg);
+    -moz-transform: translateY(12px) rotate(135deg);
+    -webkit-transform: translateY(12px) rotate(135deg);
   }
 
-  .change .bar2 {
-    opacity: 0;
+  .nav-mobile-menu--active:after {
+    transform: translateY(-12px) rotate(-135deg);
+    -moz-transform: translateY(-12px) rotate(-135deg);
+    -webkit-transform: translateY(-12px) rotate(-135deg);
   }
 
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+  .nav-mobile-menu--active div {
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .mobile {
+    position: absolute;
+    right: 0.5rem;
+    height: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.16);
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  .add-height {
+    height: 8rem;
   }
 
   main {
     margin-top: 2rem;
+    padding: 0 2rem;
     justify-content: center;
     max-width: max-content;
   }
@@ -159,5 +192,10 @@ main {
   .right-section {
     display: none;
   }
+}
 
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 2rem;
+  }
 }
