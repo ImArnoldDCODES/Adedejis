@@ -5,10 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   cursor: pointer;
   font-family: "Raleway", sans-serif;
 }
+
 html {
   background-color: rgb(2, 0, 36);
   background: linear-gradient(
@@ -18,109 +20,84 @@ html {
     rgba(0, 212, 255, 1) 100%
   );
 }
-.navbar {
-  position: relative;
-}
-logo {
-  position: absolute;
-  padding: 70px;
-  margin-left: 50px;
-  background: none;
+
+/* page header */
+header {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding: 2rem 5rem;
 }
 
-logo h2 {
-  font-size: 40px;
-  position: absolute;
-  background: none;
+header h1 {
+  font-size: 3rem;
   color: #fff;
 }
 
-.navbar ul {
-  position: relative;
+/* nav bar */
+header ul {
   display: flex;
-  flex-direction: row;
-  padding: 30px;
-  float: right;
-  margin-right: 230px;
+  place-items: center;
 }
-.navbar ul li {
+
+header ul li {
   list-style: none;
-  margin-right: 20px;
-  margin-top: 55px;
-  background: none;
+  margin: 0 1rem;
 }
-.navbar ul li a {
-  font-size: 20px;
-  display: inline-block;
+
+header ul li a {
+  font-size: 1.2rem;
   color: #fff;
   font-weight: 600;
   text-decoration: none;
-}
-.navbar ul li a:hover {
-  border: #000 5px dotted;
-  padding: 3px;
-}
-.content {
-  margin-top: 260px;
-  margin-left: 120px;
-  position: absolute;
-}
-.content h2 p {
-  position: initial;
-}
-.contant {
-  margin-top: 260px;
-  margin-left: 30px;
-  position: absolute;
-}
-.contant h3 {
-  font-weight: 800;
-  background: none;
-  margin-top: 80px;
-  margin-left: 89px;
-}
-.contant h3 p {
-  margin-left: 19px;
-  font-size: 28px;
-  position: absolute;
-  color: #fff;
-}
-.contant h3 li {
-  display: inline-block;
-  flex-direction: row;
-  list-style: none;
-  background: none;
-  margin-left: 3px;
+  transition: 0.3s ease-in-out;
 }
 
-.contant h3 li img {
-  width: 40px;
-  margin-top: 80px;
-  margin-left: 10px;
-  background: none;
+header ul li a:hover {
+  border: #fff 3px dotted;
+  padding: 0.2rem;
 }
 
-.images {
+/* page body */
+main {
   display: flex;
-  width: 10%;
-  height: 60vh;
-  border-radius: 50%;
-  position: absolute;
-  margin-top: 10pc;
-  margin-left: 700px;
-  max-width: 10%;
-  max-height: 100%;
-  background: none;
-}
-.images img {
-  border-radius: 50%;
+  justify-content: space-between;
+  place-items: center;
+  padding: 0 5rem;
 }
 
+/* typewriter text */
+.typewrite {
+  font-size: 2rem;
+  font-weight: 200;
+}
 .wrap {
-  margin-left: 15px;
-  background: none;
   color: #fff;
 }
+
+/* stack section */
+.stack-section p {
+  margin: 4rem 0 2rem 0;
+  color: white;
+  text-decoration: underline;
+  font-size: 1.6rem;
+}
+
+.stack-img {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+}
+
+.stack-img img {
+  width: 2.5rem;
+}
+
+/* right section */
+.right-section img {
+  width: 22rem;
+}
+
 
 /* The typing effect */
 @keyframes typing {
@@ -143,13 +120,9 @@ logo h2 {
   }
 }
 
-@media screen and (max-width: 450px) {
-  .container {
-    display: inline-block;
-    cursor: pointer;
-    margin-left: 270px;
-    position: absolute;
-    margin-top: 80px;
+@media screen and (max-width: 860px) {
+  .nav-menu-mobile {
+    
   }
 
   .bar1,
@@ -177,53 +150,14 @@ logo h2 {
     transform: rotate(45deg) translate(-8px, -8px);
   }
 
-  .navbar ul li a {
-    display: inline;
-    color: rgb(255, 255, 255);
+  main {
+    margin-top: 2rem;
+    justify-content: center;
+    max-width: max-content;
   }
-  .navbar ul{
-    background-color: #000;
-    transition: 3s;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-  }
-  logo {
-    margin-left: -10px;
-  }
-  .contant h3 {
-    margin-top: 250px;
-    position: relative;
-  }
-  .contant h3 u {
-    position: absolute;
-    margin-top: -20px;
-  }
-  /* .content h3 li img {
-        margin-top: 900px;
-    } */
-  .images {
-    display: block;
-  }
-  .images img {
-    height: 10vh;
-    margin-left: -540px;
-    border-radius: 50%;
-    margin-top: 50px;
-  }
-  .wrap {
-    margin-top: 80px;
-    position: absolute;
-  }
-  .content h2 p {
-    width: 100%;
-  }
-}
 
-@media screen and (max-width: 370px) {
-  .navbar ul li a {
-    display: block;
-    background-color: none;
-    margin-right: -28px;
+  .right-section {
+    display: none;
   }
+
 }

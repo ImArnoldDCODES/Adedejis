@@ -65,10 +65,12 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 
+
+// nav menu onclick function
  function myFunction(x) {
    x.classList.toggle("change");
 
-   var mobile = document.querySelector(".navbar");
+   var mobile = document.querySelector(".nav-mobile-menu");
    if (mobile.style.display = "none") {
      mobile.style.display = "block";
    }
